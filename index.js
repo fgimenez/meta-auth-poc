@@ -2,7 +2,9 @@ const express = require('express')
 const MetaAuth = require('meta-auth')
 
 const app = express()
-const metaAuth = new MetaAuth()
+const metaAuth = new MetaAuth({
+  banner: 'Auth PoC'
+})
 
 app.use('/', express.static('.'))
 
@@ -10,7 +12,7 @@ app.get('/auth/:MetaAddress', metaAuth, (req, res) => {
   // Request a message from the server
   if (req.metaAuth && req.metaAuth.challenge) {
     res.send(req.metaAuth.challenge)
-    console.log(`Challenge ${req.metaAuth.challenge} sent`)
+    console.log(`Challenge sent`)
   }
 });
 
