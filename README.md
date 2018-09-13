@@ -1,4 +1,4 @@
-# MetaAuth Proof of concept
+# MetaAuth Proof of Concept
 
 This PoC runs a local server and authenticates to it using MetaMask from an html
 page (the equivalent of an actaul Dapp). You need to have MetaMask unlocaked in
@@ -11,6 +11,8 @@ $ git clone https://github.com/fgimenez/meta-auth-poc.git
 $ cd meta-auth-poc
 
 $ npm i
+
+$ node index.js
 ```
 Then, browse to `http:localhost:3001` and click `Get Challenge`. A MetaMask
 Notification window will show up with the challenge details, click `SIGN` on it.
